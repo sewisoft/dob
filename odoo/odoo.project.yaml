@@ -28,18 +28,18 @@ modules:
 
 # Definition of the repositories to load
 repos:
-  parts/OCA/web:
+  parts/oca-web:
     remotes:
       origin: ${bootstrap:github_url}OCA/web.git
 
-  parts/OCA/server-ux:
+  parts/oca-server-ux:
     remotes:
       origin: ${bootstrap:github_url}OCA/server-ux.git
 
-  parts/OCA/server-brand:
+  parts/oca-server-brand:
     remotes:
       origin: ${bootstrap:github_url}OCA/server-brand.git
 
-  parts/OCA/server-tools:
+  parts/oca-server-tools:
     remotes:
       origin: ${bootstrap:github_url}OCA/server-tools.git
