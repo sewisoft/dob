@@ -8,13 +8,13 @@ ENV GIT_AUTHOR_NAME=odoo
 ENV GIT_COMMITTER_NAME=odoo
 ENV EMAIL=dob
 
-ARG WKHTMLTOPDF_VERSION=0.12.6.1-3
-ARG WKHTMLTOPDF_CHECKSUM='98ba0d157b50d36f23bd0dedf4c0aa28c7b0c50fcdcdc54aa5b6bbba81a3941d'
+ARG WKHTMLTOPDF_VERSION=0.13.0
+ARG WKHTMLTOPDF_CHECKSUM='8feeb4d814263688d6e6fe28e03b541be5ca94f39c6e1ef8ff4c88dd8fb9443a'
 
 RUN apt-get update && \
   export DEBIAN_FRONTEND=noninteractive && \
   cat /srv/odoo/apt.txt | xargs apt-get install --no-install-recommends -yqq && \
-  curl -SLo wkhtmltox.deb https://github.com/wkhtmltopdf/packaging/releases/download/${WKHTMLTOPDF_VERSION}/wkhtmltox_${WKHTMLTOPDF_VERSION}.bookworm_amd64.deb && \
+  curl -SLo wkhtmltox.deb https://github.com/odoo/wkhtmltopdf/releases/download/nightly/wkhtmltox_${WKHTMLTOPDF_VERSION}-1.nightly.bookworm_amd64.deb && \
   echo "${WKHTMLTOPDF_CHECKSUM}  wkhtmltox.deb" | sha256sum -c - && \
   apt-get install -yqq --no-install-recommends ./wkhtmltox.deb && \
   rm wkhtmltox.deb && \

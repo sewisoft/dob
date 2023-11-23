@@ -1,4 +1,5 @@
 build-essential
+gcc
 curl
 fonts-liberation2
 git
