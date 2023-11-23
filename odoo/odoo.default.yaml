@@ -31,7 +31,6 @@ odoo:
     log_level: info
     logfile: False
     logrotate: True
-    longpolling_port: 8072
     max_cron_threads: 2
     overwrite_existing_translations: False
     pidfile: False
