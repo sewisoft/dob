@@ -24,22 +24,26 @@ modules:
   #- module_change_auto_install
   #- remove_odoo_enterprise
   # Only load the ribbon module when mode dev/staging is defined
-  - web_environment_ribbon: [dev, staging]
+  # - web_environment_ribbon: [dev, staging]
 
 # Definition of the repositories to load
 repos:
-  parts/OCA/web:
+  parts/odoo-enterprise:
     remotes:
-      origin: ${bootstrap:github_url}OCA/web.git
+      origin: git@github.com:sewisoft/odoo-enterprise.git
 
-  parts/OCA/server-ux:
-    remotes:
-      origin: ${bootstrap:github_url}OCA/server-ux.git
-
-  parts/OCA/server-brand:
-    remotes:
-      origin: ${bootstrap:github_url}OCA/server-brand.git
-
-  parts/OCA/server-tools:
-    remotes:
-      origin: ${bootstrap:github_url}OCA/server-tools.git
+#  parts/oca-web:
+#    remotes:
+#      origin: ${bootstrap:github_url}OCA/web.git
+#
+#  parts/oca-server-ux:
+#    remotes:
+#      origin: ${bootstrap:github_url}OCA/server-ux.git
+#
+#  parts/oca-server-brand:
+#    remotes:
+#      origin: ${bootstrap:github_url}OCA/server-brand.git
+#
+#  parts/oca-server-tools:
+#    remotes:
+#      origin: ${bootstrap:github_url}OCA/server-tools.git
